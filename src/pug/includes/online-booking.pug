@@ -1,0 +1,36 @@
+.online-booking.container.online-reservation
+    h1 Выберите врача и дату приёма:
+    form(action="")
+        .row
+            .col-lg-6.col-md-6.col-sm-6.col-xs-12.online-booking__doctor-category-choose
+                include appointment/doctor-category-choose-dropdown.pug
+
+            .col-lg-6.col-md-6.col-sm-6.col-xs-12.online-booking__doctor-choose
+                select#doctor-choose(name="doctor_choose").form-control
+                    option(value="1", , data-image="images/doctor_1.jpeg") Брыкля Владимир Владимирович 
+                    option(value="1", , data-image="images/doctor_1.jpeg") Брыкля Владимир Владимирович 
+                    option(value="1", , data-image="images/doctor_1.jpeg") Брыкля Владимир Владимирович 
+                    option(value="1", , data-image="images/doctor_1.jpeg") Брыкля Владимир Владимирович 
+                    option(value="1", , data-image="images/doctor_1.jpeg") Брыкля Владимир Владимирович 
+        .row
+            .col-lg-4.col-md-4.col-sm-12.col-xs-12
+                input(type="text")#date-reseravation-picker.form-control
+            .col-lg-4.col-md-4.col-sm-12.col-xs-12
+                input(type="text")#appointment-picker.form-control
+            .col-lg-4.col-md-4.col-sm-12.col-xs-12
+                .patient
+                    p.patient-name Калинин Артём Александрович
+                    p.time 16:00 - 16:30
+                    p.doctor Врач: Брыкля В.В.
+                    p.seans Сеанс: Традиционный массаж
+                    p.patient_phone Телефон: +7 932 008 07 53
+                    p.patient_email Email: patient@yandex.ru
+                    .btn.btn-info(href="#")#proposalDecline Отменить сеанс
+    #exampleModalCenter.alert-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+        .modal-dialog.modal-dialog-centered(role='document')
+            .modal-content
+                .modal-body
+                    p.decline-c2a Подтвердите отмену сеанса
+                    .modal-buttons
+                        a.btn.btn-info(href="", data-dismiss='modal') Подтвердить отмену
+                        a.btn.btn-default(href="", data-dismiss='modal') Вернуться

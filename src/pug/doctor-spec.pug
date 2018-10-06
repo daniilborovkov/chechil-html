@@ -1,0 +1,40 @@
+extends layouts/cabinet-layout.pug
+
+block title
+  | Все специальности
+
+block content
+  .container
+    br
+    .alert.alert-info.alert-dismissible.fade.show(role='alert')
+        strong Привет  
+        | Это сообщение
+        button.close(type='button', data-dismiss='alert', aria-label='Close')
+            span(aria-hidden='true') ×
+
+  .online-booking.container.online-reservation
+    h1 Все специальности
+    .row
+      .col-sm-12.col-xs-12.col-lg-12
+        form(action="")
+            input(type="text", name="search", placeholder="Поиск специальности врача ...").form-control
+    .row
+        .col-sm-12
+            table.table
+                thead
+                    tr
+                        th(scope='col') #
+                        th(scope='col') Название
+                        th(scope='col') Вид врача
+                        th(scope='col') Врачи по специальности
+                        th(scope='col')
+                tbody
+                    tr
+                        th(scope='row') 1
+                        td Физиотерапия
+                        td Физиотерапевт
+                        td 1, 2, 4
+                        td
+                            a.btn.btn-info(href="#")
+                                i.fa.fa-edit
+                    

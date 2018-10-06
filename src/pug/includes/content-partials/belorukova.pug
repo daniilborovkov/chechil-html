@@ -1,0 +1,15 @@
+.content-partial.article
+    h3 Поздравляем Юлию Белорукову с медалью на Олимпийских Играх!
+    .slider
+        //- each c in [1, 2, 3, 4]
+        each c in [1, 2]
+            .item(id="carousel-" + c)
+                img(src="./images/julia.png", alt="Юлия Белорукова")
+                h4 За две недели до олимпиады была готова всё бросить
+                p – За весь сезон вы лишь однажды становились призером Кубка мира, причем еще в ноябре. Что происходило потом?
+                p – Я сразу сказала Маркусу, что хочу в первом же старте решить задачу отбора на Олимпийские игры. А дальше уже спокойно выступать и ни о чем не думать. Поначалу...
+                p   
+                    a.read-more-link(href="#") Читать полностью...
+                .arrows
+                    button.owl-prev(type="button", role="presentation", onclick="prevSlide()")
+                    button.owl-next(type="button", role="presentation", onclick="nextSlide()")

@@ -1,0 +1,77 @@
+.sidebar {
+    img {
+        @include box-box-shadow;
+        margin-bottom: 17px;
+    } // contents
+    .advice {
+        margin-bottom: 34px;
+        p {
+            a {
+                color: #1a1739;
+                font-family: Roboto;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+        }
+        img {
+            max-height: 180px;
+        }
+    }
+    .news {
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            li {
+                border-bottom: 1px solid gray;
+                padding: 30px 0px;
+                padding-right: 40px;
+                position: relative;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+                &:first-child {
+                    border-top: 1px solid gray;
+                }
+                &:last-child {
+                    border-bottom: none;
+                    &:after {
+                        background: $white;
+                    }
+                    a {
+                        color: $lightBlue;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        text-decoration: underline;
+                    }
+                }
+                &:after {
+                    position: absolute;
+                    content: '';
+                    background: url(../images/text_icon.svg);
+                    background-repeat: no-repeat;
+                    width: 26px;
+                    height: 23px;
+                    top: 35px;
+                    right: 0px;
+                }
+                a {
+                    color: $black;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    text-decoration: none;
+                    transition: 0.2s all ease;
+                    position: relative;
+                    &:hover {
+                        color: $lightBlue;
+                    }
+
+                    @media screen and (max-width: 590px) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+#mapModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='mapModal', aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        h5#exampleModalLabel.modal-title Как до нас добраться
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        #map_yandex
+        .map-buttons
+            button.btn.btn-info.btn-car
+                i.fas.fa-car
+            button.btn.btn-info.btn-walk
+                i.fas.fa-walking
+      .modal-footer
+        button.btn.btn-info(type='button', data-dismiss='modal') Закрыть

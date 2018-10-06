@@ -1,0 +1,33 @@
+//- In 'includes' all paths to assets should be relative to the index.pug file,
+//- like so './images/image.jpg',
+//- and not './../images/image.jpg'
+
+header.header
+  .container
+    .row.justify-content-between.align-self-center.align-items-center
+      .col-md-9.col-xs-9.col-sm-9.col-lg-9.header-first-column
+        div
+          //- img.logo(src="images/logo.svg", alt="Logo")
+          include logo.pug
+        //- .description Клиника мануальной терапии доктора Чечиля
+        .header__address
+          div.header__address__address 123317, Москва, м. Выставочная, Пресненская наб., д. 12
+          div.header__address__working-time
+            | График работы: 09.00 - 21.00
+            span.header__address__working-time__address
+              a.address(href="#", data-toggle="modal" data-target="#mapModal") Как до нас добраться
+      .col-md-3.col-xs-3.col-sm-3.col-lg-3.text-right
+        div.phone-wrapper
+          a.phone(href="tel: +7(495)741-84-94") +7(495)741-84-94
+        div.mail-wrapper
+          a.mail(href="mailto: reception@chechil.com") reception@chechil.com
+    .row.header__search
+        form(action="").col-md-9.col-xs-9.col-sm-9.col-lg-9
+          .input-group
+            input.form-control(type="text" placeholder="Поиск" aria-label="Поиск по сайту" aria-describedby="basic-addon2")
+            .input-group-append
+              button.btn.btn-outline-secondary(type="button")
+                i.fas.fa-search
+        .col-md-3.col-xs-3.col-sm-3.col-lg-3
+            a.btn-c2a(href="") Онлайн запись на прием
+    include nav.pug

@@ -1,0 +1,67 @@
+footer.footer {
+    background: $black;
+    a,
+    p {
+        color: $white;
+    }
+    .footer-row {
+        padding-top: 58px;
+        padding-bottom: 45px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 120px;
+            p {
+                margin: 0;
+                padding: 0;
+                &.copyright {
+                    font-size: 12px;
+                    font-weight: 300;
+                    line-height: 25px;
+                }
+            }
+            a {
+                text-decoration: underline;
+            }
+            .address {
+                max-width: 385px;
+                p {
+                    font-size: 16px;
+                }
+            }
+            .tel {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 25px;
+                text-decoration: underline;
+            }
+            .mail {
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 25px;
+                text-decoration: underline;
+            }
+            .agency {
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 16px;
+                text-decoration: underline;
+            }
+            .social-links {
+                float: left;
+                @media screen and (min-width: 768px) {
+                    float: right;
+                }
+                a {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}

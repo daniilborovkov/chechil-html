@@ -1,0 +1,15 @@
+extends layouts/layout.pug
+
+block title
+    | Выберите врача:
+
+block content
+    .container
+        nav(aria-label='breadcrumb')
+            ol.breadcrumb
+                li.breadcrumb-item.active Специальность
+                li.breadcrumb-item.active Врачи
+                li.breadcrumb-item.active(aria-current='page') Доктор Брыкля
+    .online-reservation.container
+        h1 Брыкля Владимир Владимирович
+        include includes/appointment/doctor-profile.pug

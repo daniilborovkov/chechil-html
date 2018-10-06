@@ -1,0 +1,41 @@
+.free-consult {
+  background: $lightBlue;
+  padding: 35px 30px 30px 30px;
+  margin-bottom: 63px;
+  @include box-box-shadow;
+  h4,
+  p,
+  div {
+    color: $white;
+  }
+  h4 {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  .columns {
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    .cols:last-child {
+        padding-left: 20px;
+    }
+    p {
+      color: #ffffff;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      margin: 0;
+      word-wrap: normal;
+      span {
+          font-weight: 700;
+      }
+    }
+  }
+}

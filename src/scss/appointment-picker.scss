@@ -1,0 +1,43 @@
+.appo-picker {
+    max-width: 300px;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    .appo-picker-title {
+        height: 60px;
+        padding-top: 20px;
+        @include box-box-shadow;
+        z-index: 99;
+    }
+    .appo-picker-list {
+        max-width: 300px;
+        border-left: 1px solid $borderGray;
+        border-bottom: 1px solid $borderGray;
+        
+        .appo-picker-list-item {
+            height: 43px;
+            input {
+                background: $white;
+                border-radius: 0px;
+                border-color: $borderGray;
+                font-size: 14px;
+                &:hover {
+                    background: $lightBlue;
+                }
+                &.is-selected {
+                    box-shadow: none;
+                    background: $lightBlue;
+                }
+            }
+            &.disabled {
+                display: inline;
+                input {
+                    background: $blue;
+                    z-index: 99;
+                    color: $white;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

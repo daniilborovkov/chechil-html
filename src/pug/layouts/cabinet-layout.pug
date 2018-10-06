@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous")
+    link(rel="stylesheet", href="css/vendor.css")
+    link(rel="stylesheet", href="css/main.css")
+    title
+      block title
+
+  body
+    include ../includes/header-cabinet.pug
+    include contents.pug
+
+    block content
+    
+    //- footer. One for all
+    include footer.pug
+    include ../includes/map-modal.pug
+
+    script(src="js/vendor.js")
+    script(src="js/app.js")

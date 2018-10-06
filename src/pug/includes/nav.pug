@@ -1,0 +1,9 @@
+nav.navbar.navbar-expand-lg.navbar-light
+      button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          - var menuItems = ['Главная', 'Каталог', 'Новости', 'О клинике', 'Врачи', 'Услуги и цены', 'Механический эндомассаж', 'Клиенты', 'Вопрос-ответ', 'Контакты']
+          each item in menuItems
+            li.nav-item
+                a.nav-link(href="#")= item

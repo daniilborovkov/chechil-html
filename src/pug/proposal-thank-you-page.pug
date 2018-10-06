@@ -1,0 +1,23 @@
+extends layouts/layout.pug
+
+block title
+    | Благодарим вас за заявку
+
+block content
+    .container
+        nav(aria-label='breadcrumb')
+            ol.breadcrumb
+                li.breadcrumb-item Специальность
+                li.breadcrumb-item Врачи
+                li.breadcrumb-item Доктор Брыкля
+                li.breadcrumb-item Выбор даты
+                li.breadcrumb-item Запись
+                li.breadcrumb-item.active(aria-current='page') Спасибо
+    .online-reservation.container
+        .row
+            .col-md-6
+                h1 Благодарим вас за заявку
+                p Ваша заявка отправлена. Приём состоится 18.05.2018 в 16:00. Ваш врач Брыкля Владимир Владимирович. За день до сеанса вы получите СМС сообщение с напоминанием о дате приёма.
+                .buttons
+                    a.btn.btn-info(href="#") Изменить дату и время
+                    a.btn.btn-disabled(href="#") Отменить приём

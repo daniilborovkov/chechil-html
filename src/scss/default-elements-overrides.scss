@@ -1,0 +1,146 @@
+.img {
+  max-width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 100%;
+  position: relative; // &:hover {
+  // }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 960px;
+}
+
+*:focus {
+  outline: none !important;
+  letter-spacing: 0px;
+}
+
+.btn {
+  border-radius: 0px;
+  @include center-button;
+  @include box-box-shadow;
+  &.btn-info {
+    background: $lightBlue;
+    border: none;
+  }
+  &.btn-info-1 {
+    background-color: #c5c75c;
+    color: $white;
+  }
+  &.btn-info-2 {
+    color: $white;
+    background-color: #925cc7;
+  }
+  &.btn-disabled {
+    background-color: #c4c4c4;
+    color: $white;
+  }
+}
+
+a,
+button {
+  &:focus {
+    letter-spacing: 0px;
+  }
+}
+
+// accordion
+.accordion .card-header button:after {
+  position: absolute;
+  right: 40px;
+  width: 10px;
+  font-family: 'FontAwesome';
+  content: "\f0d8";
+  float: right;
+  transition: .5s transform ease-in-out;
+}
+
+.accordion .card-header button.collapsed:after {
+  /* symbol for "collapsed" panels */
+  transform: rotate(180deg);
+}
+
+// end accordion
+.disabled {
+  display: none;
+}
+
+i.fa {
+  font-family: FontAwesome;
+}
+
+.modal-content {
+  border-radius: 0px;
+}
+
+input,
+select,
+textarea {
+  &.form-control {
+    border-radius: 0;
+  }
+}
+
+ol.breadcrumb {
+  margin-top: 55px;
+  margin-bottom: 6px;
+  padding-left: 0px;
+  background: $white;
+  li {
+    color: $black;
+    &.active {
+      color: $black;
+    }
+    &.breadcrumb-item {
+      &:before {
+        content: '>';
+      }
+      &:first-child {
+        &:before {
+          content: '';
+        }
+      }
+    }
+    a {
+      color: $black;
+    }
+  }
+}
+
+// bootstrap modal
+.modal-backdrop {
+  background-color: #fff;
+}
+
+// typography
+h3 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  margin-bottom: 28px;
+  @media screen and (max-width: 768.99px) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.custom-control-input:checked~.custom-control-indicator {
+  background-color: $blue;
+  border-radius: 0px;
+  width: 1.2rem;
+  height: 1.2rem;
+  top: 0;
+}
+
+.alert-info {
+  background: $blue;
+  color: $white;
+}
+

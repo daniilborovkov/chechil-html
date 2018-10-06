@@ -1,0 +1,14 @@
+extends layouts/layout.pug
+
+block title
+    | Выберите врача:
+
+block content
+    .container
+        nav(aria-label='breadcrumb')
+            ol.breadcrumb
+                li.breadcrumb-item.active(aria-current='page') Специальность
+                li.breadcrumb-item.active Врачи
+    .online-reservation.container
+        h1 Выберите врача:
+        include includes/appointment/doctor-categories-doctor-choose.pug

@@ -1,0 +1,290 @@
+.online-reservation {
+    margin-bottom: 60px;
+    h1 {
+        color: $black;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 36px;
+        margin-bottom: 28px;
+    }
+    h4 {
+        color: $black;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+    .thumbnail {
+        width: 140px;
+        height: 170px;
+    }
+    .doctor-category-choose {
+        .doctor-category-choose__list {
+            .doctor-category-choose__list__item {
+                height: 80px;
+                @include box-box-shadow;
+                margin-top: 5px;
+                padding-left: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                transition: 0.3s all ease-in-out;
+                position: relative;
+                &:after {
+                    position: absolute;
+                    font-family: FontAwesome;
+                    content: '\f0da';
+                    right: 40px;
+                }
+                &:hover {
+                    background: $blue;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .doctor-categories-doctor-choose {
+        &__list {
+            &__item {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                align-content: center;
+                margin-bottom: 5px;
+                padding-right: 80px;
+                @include box-box-shadow;
+                transition: 0.3s all ease-in-out;
+                position: relative;
+                &:hover {
+                    h4,
+                    p {
+                        color: $white;
+                    }
+                    background: $blue;
+                    &:after {
+                        color: $white;
+                    }
+                }
+                &:after {
+                    position: absolute;
+                    font-family: FontAwesome;
+                    content: '\f0da';
+                    right: 40px;
+                }
+                img {
+                    width: 140px;
+                    height: 170px;
+                }
+                &__content {
+                    margin-left: 20px;
+                    h4,
+                    p {
+                        margin-bottom: 12px;
+                    }
+                    h4 {
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .doctor-profile {
+        &__content {
+            img {
+                width: 220px;
+                height: 267px;
+                @include box-box-shadow;
+                float: left;
+                margin-right: 20px;
+            }
+            margin-bottom: 50px;
+        }
+        &__choose {
+            ul {
+                list-style-type: none;
+                li {
+                    height: 80px;
+                    @include box-box-shadow;
+                    margin-top: 5px;
+                    padding-left: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    transition: 0.3s all ease-in-out;
+                    position: relative;
+                    &:after {
+                        position: absolute;
+                        font-family: FontAwesome;
+                        content: '\f0da';
+                        right: 20px;
+                    }
+                    &:hover {
+                        background: $blue;
+                        color: $white;
+                        a {
+                            color: $white;
+                        }
+                    }
+                    a {
+                        font-size: 16px;
+                        color: $black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    &.contact-data {
+        .doctor-data {
+            @include box-box-shadow;
+            background: $blue;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;
+            h4,
+            p {
+                color: $white;
+            }
+            img {
+                margin-right: 20px;
+            }
+        }
+        button {
+            width: 220px;
+            height: 50px;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    input.form-control,
+    input {
+        height: 50px;
+        border: 1px solid $gray;
+        &:hover,
+        &:focus,
+        &:active {
+            border-color: $black;
+        }
+    }
+}
+
+.online-booking {
+    margin-bottom: 150px;
+    margin-top: 55px;
+    #date-reseravation-picker,
+    #appointment-picker {
+        display: none;
+    }
+    .patient {
+        @include box-box-shadow;
+        padding: 26px 30px;
+        p {
+            margin-bottom: 20px;
+        }
+        .patient-name {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+        .time {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16px;
+        }
+        a {
+            min-width: 240px;
+            height: 43px;
+            color: #ffffff;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 43px;
+        }
+    }
+    .row {
+        margin-bottom: 20px;
+    }
+}
+
+.alert-modal {
+    .modal-dialog {
+        top: 30%;
+    }
+    .modal-body {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        background-color: #7599d2;
+        max-width: 620px;
+        min-width: 620px;
+        padding: 54px 80px;
+        p.decline-c2a {
+            text-align: center;
+            color: #ffffff;
+            font-family: Roboto;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 36px;
+            @media screen and (min-width: 768px) {
+                min-width: 460px;
+            }
+        }
+        .modal-buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 30px;
+            a.btn {
+                /* Style for "Вернуться" */
+                width: 220px;
+                height: 50px;
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 43px;
+                &.btn-default {
+                    color: #1a1739;
+                    background: $white;
+                }
+            }
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 460px) {
+        flex-wrap: wrap;
+    }
+    a.btn {
+        margin-top: 34px;
+        margin-right: 20px;
+        min-width: 220px;
+        min-height: 50px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+
+.balance-box {
+    @include box-box-shadow;
+    padding: 20px;
+    p {
+        span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+    
+}

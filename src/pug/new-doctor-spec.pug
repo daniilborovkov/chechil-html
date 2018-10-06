@@ -1,0 +1,18 @@
+extends layouts/cabinet-layout.pug
+
+block title
+  | Новая специальность
+
+block content
+  .online-booking.container.online-reservation
+    h1 Новая специальность
+    .row
+      .col-sm-6.col-xs-6.col-lg-6
+        form(action="")
+            .form-group
+                input(type="text", name="spec_name", placeholder="Название специальности, например, физиотерапия").form-control
+            .form-group
+                input(type="text", name="spec_type", placeholder="Название врача").form-control
+            .form-group
+                button(type="submit").btn.btn-info Сохранить
+        

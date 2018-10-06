@@ -1,0 +1,32 @@
+extends layouts/cabinet-layout.pug
+
+block title
+  | Поиск по клиентам
+
+block content
+  .online-booking.container.online-reservation
+    h1 Поиск
+    p Заметка. В базе данных нет сущности клиента. Клиент может ввестиновый номер, вместо Ё написать е. Так что по сути это поиск по заявкам
+    p Поиск будет автокомплитом через Ajax. то норм, что кнопки нет)
+    .row
+      .col-sm-12.col-xs-12.col-lg-12
+        form(action="")
+            input(type="text", name="search", placeholder="Поиск клиента ...").form-control
+    .row
+        .col-sm-12
+            table.table
+                thead
+                    tr
+                        th(scope='col') #
+                        th(scope='col') ФИО
+                        th(scope='col') Телефон
+                        th(scope='col') Почта
+                        th(scope='col') Направление
+                tbody
+                    tr
+                        th(scope='row') 1
+                        td Daniil Developer
+                        td +77718521479
+                        td daniildeveloper@ya.ru
+                        td Мануальная терапия, Доктор Чечиль
+                    

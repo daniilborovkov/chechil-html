@@ -1,0 +1,32 @@
+extends layouts/cabinet-layout.pug
+
+block title
+  | Все врачи
+
+block content
+  .online-booking.container.online-reservation
+    h1 Врачи
+    .row
+      .col-sm-12.col-xs-12.col-lg-12
+        form(action="")
+            input(type="text", name="search", placeholder="Поиск врача ...").form-control
+    .row
+        .col-sm-12
+            table.table
+                thead
+                    tr
+                        th(scope='col') #
+                        th(scope='col') ФИО
+                        th(scope='col') Специальность
+                        th(scope='col') Кабинет
+                        th(scope='col')
+                tbody
+                    tr
+                        th(scope='row') 1
+                        td Брыкля Владимир Владимирович
+                        td Физиотерапевт
+                        td 1
+                        td
+                            a.btn.btn-info(href="#")
+                                i.fa.fa-edit
+                    

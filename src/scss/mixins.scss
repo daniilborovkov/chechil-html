@@ -1,0 +1,28 @@
+@mixin box-box-shadow {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+@mixin big-button-box-shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@mixin placeholder-color($color) {
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color;
+  }
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $color;
+  }
+}
+
+@mixin center-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

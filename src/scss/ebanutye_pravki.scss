@@ -1,0 +1,115 @@
+@media screen and (max-width: 960px) {
+    ul.navbar {
+        overflow-x: scroll;
+    }
+    a.nav-link {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    * {
+        font-size: 12px;
+    } // default typo
+    h1 {
+        font-size: 16px;
+    }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    a,
+    li,
+    p,
+    div {
+        font-size: 12px !important;
+        line-height: 14px !important;
+    }
+    .content {
+        &__content {
+            @media screen and (max-width: 460px) {
+                max-width: 66.6%;
+            }
+        }
+        .sidebar {
+            @media screen and (max-width: 460px) {
+                max-width: 30.6%;
+            }
+        }
+    }
+    .c2a-text {
+        line-height: 30px !important;
+        margin-left: 0px !important;
+    } // divs
+    .col-sm-4 {
+        max-width: 33%;
+        padding: {
+            left: 5px;
+            right: 5px;
+        }
+        img {
+            width: 100%;
+        }
+    } // partners fix
+    .partners {
+        .partner {
+            min-width: auto;
+            min-height: 60px;
+            img {
+                max-height: unset;
+                width: auto;
+                max-width: 50%;
+            }
+        }
+    } // article content
+    .article {
+        img {
+            &.article-preview {
+                height: 120px !important;
+            }
+            &.left {
+                height: 150px;
+                width: auto;
+            }
+        }
+    } // news
+    .news {
+        li {
+            &:after {
+                height: 15px;
+                width: 17px;
+                transform: scale(0.8);
+                top: 30px !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .header {
+        &__address {
+            &__working-time {
+                &__address {
+                    float: unset !important;
+                    display: block;
+                }
+            }
+        }
+        .phone {
+            font-size: 15px !important; 
+        }
+
+        .header__search {
+            form {
+                margin-bottom: 20px;
+            }
+            a.btn-c2a {
+                padding-top: 14px !important;
+            }
+        }
+    }
+}

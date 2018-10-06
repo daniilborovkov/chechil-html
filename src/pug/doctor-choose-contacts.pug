@@ -1,0 +1,42 @@
+extends layouts/layout.pug
+
+block title
+    | Благодарим вас за заявку
+
+block content
+    .container
+        nav(aria-label='breadcrumb')
+            ol.breadcrumb
+                li.breadcrumb-item.active Специальность
+                li.breadcrumb-item.active Врачи
+                li.breadcrumb-item.active Доктор Брыкля
+                li.breadcrumb-item.active Выбор даты
+                li.breadcrumb-item.active(aria-current='page') Запись
+    .online-reservation.container.contact-data
+        h1 Оставьте контактные данные для связи
+        .row
+            .col-lg-7.col-sm-7.col-xs-7
+                .box.doctor-data
+                    img.thumbnail(src="images/doctor_1.jpeg", alt="Брыкля Владимир Владимирович")
+                    div
+                        h4 Брыкля Владимир Владимирович
+                        p Сеанс традиционного массажа
+                        p Приём состоится 18.05.2018 в 16:00
+            .col-lg-5.col-sm-5.col-xs-5
+                form.form-horizontal
+                    .form-group
+                        input.form-control(name='name', type='text', placeholder='Ваше имя *', required)
+                    .form-group
+                        input.form-control(name='phone', type='text', placeholder='Ваш телефон *', required)
+                    .form-group
+                        input.form-control(name='name', type='email', placeholder='Ваш Email *', required)
+                    .form-group
+                        label.custom-control.custom-checkbox
+                            input.custom-control-input(name='privacy_accept', checked='checked', value='privacy_accept', type='checkbox')
+                            span.custom-control-indicator
+                            span.custom-control-description Даю свое согласие на обработку данных
+                    .form-group
+                        button.btn.btn-info Отправить
+
+
+        

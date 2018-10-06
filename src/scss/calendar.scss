@@ -1,0 +1,11 @@
+.fc-button {
+    border-radius: 0px !important;
+    @include box-box-shadow;
+    min-height: 25px;
+    background: $blue;
+    color: $white;
+}
+.fc-today {
+    background: $blue;
+    color: $white;
+}

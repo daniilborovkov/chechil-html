@@ -1,0 +1,29 @@
+extends layouts/cabinet-layout.pug
+
+block title
+  | Панель управления ядерным реактором замаскированная под панель управления записями клиники мануальной терапии
+
+block content
+  .online-booking.container.online-reservation
+    .row
+      .col-sm-3.col-xs-3.col-lg-3
+        //- box with rests for online booking here
+        include includes/balanse-box.pug
+    //- box with 5 latest proposals here
+    .row
+      .col-sm-12
+        table.table.balance-box
+          thead
+              tr
+                  th(scope='col') #
+                  th(scope='col') ФИО
+                  th(scope='col') Телефон
+                  th(scope='col') Почта
+                  th(scope='col') Направление
+          tbody
+              tr
+                  th(scope='row') 1
+                  td Daniil Developer
+                  td +77718521479
+                  td daniildeveloper@ya.ru
+                  td Мануальная терапия, Доктор Чечиль

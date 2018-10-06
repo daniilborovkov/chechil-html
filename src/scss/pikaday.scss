@@ -1,0 +1,92 @@
+.pika-single {
+    border: none;
+    z-index: 1;
+    color: $black;
+    .pika-lendar {
+        width: 100%;
+        margin: 0;
+        .pika-title {
+            @include box-box-shadow;
+            height: 60px;
+            padding: 15px 20px;
+        }
+        .pika-table {
+            border: 1px solid $borderGray;
+            thead {
+                tr {
+                    th {
+                        width: 44px;
+                        height: 44px;
+                        border: 1px solid $borderGray;
+                        abbr {
+                            font-weight: 700;
+                            color: $black;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            tbody {
+                .pika-row {
+                    height: 44px;
+                    td {
+                        width: 44px;
+                        border: 1px solid $borderGray;
+                        button {
+                            background: $white;
+                            color: $black;
+                            font-size: 14px;
+                            text-align: center;
+                            border-radius: 0px;
+                        }
+                        &.is-disabled {
+                            color: $white;
+                            background: $calendarGray;
+                            button {
+                                background: $calendarGray;
+                                color: $white;
+                                z-index: 999;
+                                opacity: 1;
+                            }
+                        }
+                        &:hover {
+                            background: $lightBlue;
+                            button {
+                                color: $white;
+                                background: $lightBlue;
+                            }
+                            &.is-disabled {
+                                color: $white;
+                                background: $calendarGray;
+                                button {
+                                    background: $calendarGray;
+                                    color: $white;
+                                    z-index: 999;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        &.is-selected {
+                            background: $blue;
+                            button {
+                                color: $white;
+                                background: $blue;
+                            }
+                        }
+                        &.is-outside-current-month {
+                            &.is-disabled {
+                                color: $calendarGray;
+                                background: $white;
+                                button {
+                                    background: $white;
+                                    color: #ccc;
+                                    opacity: 0,3;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

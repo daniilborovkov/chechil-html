@@ -1,0 +1,9 @@
+.advices.sidebar-content
+    h3 Полезные советы от доктора Чечиля
+    - var advicesTitles = ['Почему нельзя сидеть нога на ногу?', 'Как правильно сидеть за рулём?', 'Почему возникает сколиоз?', 'Подозрение на грыжу? Не спешите делать МРТ!', 'Спорт - польза или вред?', 'Как правильно надевать обувь?']
+    each adviceTitle, index in advicesTitles
+        .advice
+            //- - index = 
+            img(src="./images/advice_" + (index + 1) + ".jpeg", alt="")
+            p
+                a(href="#")= adviceTitle

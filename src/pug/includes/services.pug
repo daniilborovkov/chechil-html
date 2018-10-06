@@ -1,0 +1,32 @@
+.services
+    .container
+        #servicesAccordion.accordion
+            .card
+                #headingOne.card-header
+                    h5.mb-0
+                        button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
+                            | Наши услуги
+                #collapseOne.collapse.show.bounceInDown(aria-labelledby="headingOne" data-parent="#servicesAccordion")
+                    .card-body
+                        .row
+                            .col-lg-4.col-md-4.col-sm-6
+                                ul
+                                    - var services = ['Мануальная терапия', 'Классический массаж', 'Массаж с элементами ПИР', 'Вытяжение позвоночника', 'Лечебная физкультура', 'Восстановление нервов (ВТЭС)', 'Массаж спины', 'Тейпирование', 'Лечение остеохондроза']
+                                    each service in services
+                                        li
+                                            a(href="#")= service
+                            .col-lg-4.col-md-4.col-sm-6
+                                ul
+                                    -var services = ['Аппарат Air Nobius', 'Индивидуальные ортопедические стельки', 'Восстановление после травм', 'Ортопедические стельки «Formthotics»', 'Kyboot – обувь на воздушной подушке', 'Лечение позвоночника мануальной терапией', 'Ортопедические стельки для спорта', 'Купить ортопедические пяточные стельки']
+                                    each service in services
+                                        li
+                                            a(href="#")= service
+                            .col-lg-4.col-md-4.col-sm-6
+                                ul
+                                    - var services  = ['Ортопедические стельки для взрослых', 'Продольно-поперечные стельки', 'Стельки при плоскостопии', 'Стельки при поперечном плоскостопии', 'Стоимость ортопедических стелек', 'Тонкие ортопедические стельки']
+                                    each service in services
+                                        li
+                                            a(href="#")= service
+                                    li
+                                        a.btn.btn-info(href="#") Задать вопрос онлайн
+                                        p.small-description Сергей Чечиль лично ответит на любые ваши вопросы прямо на сайте!

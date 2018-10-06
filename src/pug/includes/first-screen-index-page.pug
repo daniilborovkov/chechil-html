@@ -1,0 +1,13 @@
+.first-screen-index-page
+    .first-screen-index-page__content.container
+        .row.justify-content-between
+            .col-lg-4.col-md-4.col-sm-4.col-xs-4
+                .first-screen-index-page-left
+                    h2 Мы ставим на ноги!
+                    p Врач — мануальный терапевт, участвующий в подготовке олимпийской сборной России по лыжным гонкам.
+                    a.btn.btn-info.sweep-to-right Бесплатная консультация
+            .col-lg-4.col-md-4.col-sm-4.col-xs-4
+                .first-screen-index-page-services-list
+                    - var services = ['Мануальная терапия', 'Традиционный массаж', 'Лечебная физкультура', 'Внутритканевая электростимуляция', 'Стельки индивидуальные  ортопедические  “Formthotics”', 'Восстановление после травм']
+                    each service in services
+                        a(href="#").service= service

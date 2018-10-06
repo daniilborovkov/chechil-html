@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+@import 'snippets';
+@import 'default-elements-overrides';
+// stylings
+@import 'header';
+@import 'nav.scss';
+@import 'first-screen';
+@import 'services';
+@import 'content';
+@import 'consult';
+@import 'carousel';
+@import 'sidebar';
+@import 'footer';
+@import 'map';
+@import 'select';
+@import 'online-reservation';
+@import 'pikaday';
+@import 'appointment-picker';
+@import 'calendar';
+@import 'colorbox';
+
+// developer tools
+@import 'contents';
+@import 'ebanutye_pravki';

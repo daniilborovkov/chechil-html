@@ -1,0 +1,44 @@
+extends layouts/cabinet-layout.pug
+
+block title
+  | Новый врач
+
+//- todo: create cheduler picker
+block content
+  form(action="").online-booking.container.online-reservation
+    h1 Новый врач
+    .row
+      .col-sm-6.col-xs-6.col-lg-6
+          .form-group
+              input(type="text", name="spec_name", placeholder="ФИО").form-control
+          .form-group
+              label.custom-control.custom-checkbox
+                    input.custom-control-input(type='checkbox')
+                    span.custom-control-indicator
+                    span.custom-control-description Физиотерапевт
+          .form-group
+              button(type="submit").btn.btn-info Сохранить
+    //- render all week days.
+    
+    .row
+      .col-sm-6
+        h4 График работ
+        ul.online-booking__week-days
+          - var weekdays = ['Пн', "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
+          each weekDay, index in weekdays
+            li
+              .form-group
+                label.custom-control.custom-checkbox
+                    input.custom-control-input(name='week_day_' + index, checked='checked', type='checkbox')
+                    span.custom-control-indicator
+                    span.custom-control-description= weekDay
+              .row.align-items-center(style="align-content: center")
+                .col-sm-5
+                  input.time-picker.form-control(type="time")
+                .col-sm-1.xs-hidden
+                  span -
+                .col-sm-5
+                  input.time-picker.form-control(type="time")
+              br
+        .form-group
+              button(type="submit").btn.btn-info Сохранить
